@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "emojibase-data": "^2.1.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "unicharadata": "^9.0.0-alpha.6"
   },
   "scripts": {
     "start": "react-scripts start",
