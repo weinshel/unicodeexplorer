@@ -10,7 +10,8 @@
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "unicharadata": "^9.0.0-alpha.6"
+    "unicharadata": "^9.0.0-alpha.6",
+    "unicode-10.0.0": "^0.7.4"
   },
   "scripts": {
     "predeploy": "npm run build",

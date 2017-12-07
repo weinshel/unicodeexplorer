@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
@@ -39,11 +38,14 @@ const EmojiList = ({ match }) => (
     <Route exact path={match.url} render={() => (
       <div>
         {emojis.map(emoji => (
-          <div key={emoji.order}>
-            <Link to={{
-              pathname: match.url + '/' + emoji.urlName,
-              state: { details: emoji }
-            }}>
+          <div key={emoji.order} class="character-box">
+            <Link 
+              style={{ textDecoration: 'none' }}
+              to={{
+                pathname: match.url + '/' + emoji.urlName,
+                state: { details: emoji }
+              }}
+            >
               {emoji.emoji}
             </Link>
 

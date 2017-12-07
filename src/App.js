@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import './App.css';
-import CharDetails from './CharDetails';
+import Scripts from './Scripts';
 import EmojiList from  './Emojis';
 
 class App extends Component {
@@ -15,14 +15,14 @@ class App extends Component {
         <div>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/chars">Characters</Link></li>
+            <li><Link to="/scripts">Scripts</Link></li>
             <li><Link to="/emoji">Emoji</Link></li>
           </ul>
 
           <hr/>
 
           <Route exact path="/" component={Home}/>
-          <Route path="/chars" component={CharDetails}/>
+          <Route path="/scripts" component={Scripts}/>
           <Route path="/emoji" component={EmojiList}/>
         </div>
       </HashRouter>
