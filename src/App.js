@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   HashRouter,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,7 +19,7 @@ class App extends Component {
     return(
       <HashRouter>
         <div>
-          <Navbar inverse fixedTop>
+          <Navbar  fixedTop>
             <Navbar.Header>
               <LinkContainer to="/">
                 <Navbar.Brand>
@@ -40,7 +41,7 @@ class App extends Component {
             </Nav>
           </Navbar>
 
-          <hr/>
+          <br/><br/><br/>
 
           <div className="container">
             <Route exact path="/" component={Home}/>
@@ -57,8 +58,11 @@ class App extends Component {
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
-    <p>hello world!</p>
+    <h1>Unicode Explorer</h1>
+    <div className="homeText">
+      <p>Explore the Unicode character set!</p>
+      <p>See all the the characters in a specific block, such as <Link to={{pathname: '/blocks/cuneiform'}}>Cuneiform</Link> or <Link to={{pathname: '/blocks/cherokee'}}>Cherokee</Link>. Learn about a specific character such as <Link to={{pathname: '/characters/77952'}}>𓂀</Link>. See <Link to={{pathname: '/emoji'}}>all the emoji</Link>, or view details about <Link to={{pathname: '/emoji/smiling-face-with-horns'}}>😈</Link>.</p>
+    </div>
   </div>
 )
 

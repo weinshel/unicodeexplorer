@@ -73,7 +73,7 @@ const CharactersGrid = (start, end) => {
   // const codePoints = require('unicode-10.0.0/Script/' + scriptName + '/code-points');
   // const symbols = require('unicode-10.0.0/' + type + '/' + scriptName + '/symbols');
 
-  const characters = getCharacters().slice(start,end);
+  const characters = getCharacters().filter(x => (x.code >= start && x.code <= end));
 
   return(
     <div>
