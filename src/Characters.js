@@ -6,28 +6,44 @@ import {
 
 import helpers from './helpers.js';
 
+import {getBlocks, getCharacters} from 'unidata';
 
-const CharacterBox = (symbol) => {
+
+const CharacterBox = (codepoint) => {
   // const name = unicharadata.lookupname(symbol);
   // const cleanName = helpers.cleanName(name);
   // const urlName = helpers.urlName(name);
-  const urlName = symbol;
+//   const urlName = symbol;
   return (
 
-    <div key={urlName} className="character-box">
+    <div key={codepoint} className="character-box">
       <Link 
         style={{ textDecoration: 'none' }}
         to={{
-          pathname: '/characters/' + urlName
+          pathname: '/characters/' + codepoint
         }}
       >
-        {symbol}
+        {String.fromCodePoint(codepoint)}
       </Link>
 
     </div>
   );
 }
 
-const CharacterDetails = () => {};
+const CharacterPage = ({ match }) => {
+  const codepoint = match.params.name;
+  console.log(codepoint);
+  const details = getCharacters().find(x=>x.code == codepoint);
 
-export {CharacterBox, CharacterDetails};
+  return (
+    <div>
+      <h1>Characters</h1>
+      {CharacterBox(codepoint)}
+      <p>{details.name}</p>
+      <pre>{JSON.stringify(details, null, '\t')}</pre>
+    </div>
+  )
+}
+
+
+export {CharacterBox, CharacterPage};

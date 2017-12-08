@@ -13,7 +13,7 @@
     "unicharadata": "^9.0.0-alpha.6",
     "unicode": "^10.0.0",
     "unicode-10.0.0": "^0.7.4",
-    "unidata": "weinshel/unidata"
+    "unidata": "github:weinshel/unidata"
   },
   "scripts": {
     "predeploy": "npm run build",

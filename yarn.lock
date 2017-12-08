@@ -6238,7 +6238,7 @@ unicode@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/unicode/-/unicode-10.0.0.tgz#e5d51c1db93b6c71a0b879e0b0c4af7e6fdf688e"
 
-unidata@weinshel/unidata:
+"unidata@github:weinshel/unidata":
   version "8.1.1"
   resolved "https://codeload.github.com/weinshel/unidata/tar.gz/c4fe4ca828d0f8c26693eb4b97e038a7810c8ba5"
 
