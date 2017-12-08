@@ -40,6 +40,14 @@ const EmojiBox = (emoji) => {
   );
 }
 
+const EmojiBoxLarge = (emoji) => {
+  return (
+    <div key={emoji.order} className="character-box-large">
+        {emoji.emoji}
+    </div>
+  );
+}
+
 const EmojiList = ({ match }) => (
   <div>
     <h1>Emoji</h1>
@@ -70,7 +78,7 @@ const EmojiDetails = ({ match }) => {
 
   return (
     <div>
-      <h1>{details.emoji}</h1>
+      {EmojiBoxLarge(details)}
       <p>{details.cleanName}</p>
       <pre>{details.hexcode}</pre>
       <pre>{JSON.stringify(details, null, '\t')}</pre>

@@ -3,10 +3,11 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import {LinkContainer} from 'react-router-bootstrap';
 
 import helpers from './helpers.js';
 
-import {getBlocks, getCharacters} from 'unidata';
+import {getBlocks, getCharacters} from 'unidata10';
 
 
 const CharacterBox = (codepoint) => {
@@ -15,18 +16,31 @@ const CharacterBox = (codepoint) => {
   // const urlName = helpers.urlName(name);
 //   const urlName = symbol;
   return (
-
-    <div key={codepoint} className="character-box">
-      <Link 
+    <LinkContainer 
         style={{ textDecoration: 'none' }}
         to={{
           pathname: '/characters/' + codepoint
         }}
       >
+      <div key={codepoint} className="character-box">
+      
         {String.fromCodePoint(codepoint)}
-      </Link>
 
-    </div>
+      </div>      
+    </LinkContainer>
+
+  );
+}
+
+const CharacterBoxLarge = (codepoint) => {
+  // const name = unicharadata.lookupname(symbol);
+  // const cleanName = helpers.cleanName(name);
+  // const urlName = helpers.urlName(name);
+//   const urlName = symbol;
+  return (
+    <div key={codepoint} className="character-box-large">
+      {String.fromCodePoint(codepoint)}
+    </div>      
   );
 }
 
@@ -38,7 +52,7 @@ const CharacterPage = ({ match }) => {
   return (
     <div>
       <h1>Characters</h1>
-      {CharacterBox(codepoint)}
+      {CharacterBoxLarge(codepoint)}
       <p>{details.name}</p>
       <pre>{JSON.stringify(details, null, '\t')}</pre>
     </div>
@@ -46,4 +60,4 @@ const CharacterPage = ({ match }) => {
 }
 
 
-export {CharacterBox, CharacterPage};
+export {CharacterBox, CharacterBoxLarge, CharacterPage};

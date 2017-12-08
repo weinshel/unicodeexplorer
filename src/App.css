@@ -39,3 +39,16 @@
   text-decoration: none;
   display: inline-block;
 }
+
+.character-box-large {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
