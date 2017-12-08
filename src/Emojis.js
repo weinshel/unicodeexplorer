@@ -4,25 +4,19 @@ import {
   Link
 } from 'react-router-dom';
 
+import helpers from './helpers.js';
+
 import emojis from 'emojibase-data/en/data.json';
 // import compact from 'emojibase-data/en/compact.json';
-
-function urlName(string) {
-  return string.toLowerCase().replace(/[^a-z0-9]+/g,'-');;
-}
-
-function cleanName(string) {
-  return string.toLowerCase().replace(/[^a-z0-9]+/g,' ');;
-}
 
 
 emojis.forEach(emoji => {
   if (emoji.annotation) {
-    emoji.urlName = urlName(emoji.annotation);
-    emoji.cleanName = cleanName(emoji.annotation);
+    emoji.urlName = helpers.urlName(emoji.annotation);
+    emoji.cleanName = helpers.cleanName(emoji.annotation);
   } else {
-    emoji.urlName = urlName(emoji.name);
-    emoji.cleanName = cleanName(emoji.name);
+    emoji.urlName = helpers.urlName(emoji.name);
+    emoji.cleanName = helpers.cleanName(emoji.name);
   }
 })
 
@@ -38,12 +32,11 @@ const EmojiList = ({ match }) => (
     <Route exact path={match.url} render={() => (
       <div>
         {emojis.map(emoji => (
-          <div key={emoji.order} class="character-box">
+          <div key={emoji.order} className="character-box">
             <Link 
               style={{ textDecoration: 'none' }}
               to={{
-                pathname: match.url + '/' + emoji.urlName,
-                state: { details: emoji }
+                pathname: match.url + '/' + emoji.urlName
               }}
             >
               {emoji.emoji}

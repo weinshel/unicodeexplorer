@@ -15,6 +15,7 @@ class App extends Component {
         <div>
           <ul>
             <li><Link to="/">Home</Link></li>
+            {/* <li><Link to="/blocks">Character Blocks</Link></li> */}
             <li><Link to="/scripts">Scripts</Link></li>
             <li><Link to="/emoji">Emoji</Link></li>
           </ul>
@@ -23,6 +24,7 @@ class App extends Component {
 
           <Route exact path="/" component={Home}/>
           <Route path="/scripts" component={Scripts}/>
+          {/* <Route path="/blocks" component={Scripts}/> */}
           <Route path="/emoji" component={EmojiList}/>
         </div>
       </HashRouter>
