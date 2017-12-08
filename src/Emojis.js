@@ -24,6 +24,22 @@ emojis.forEach(emoji => {
 //   <pre>{JSON.stringify(emoji)}</pre>
 // });
 
+const EmojiBox = (emoji) => {
+  return (
+    <div key={emoji.order} className="character-box">
+      <Link 
+        style={{ textDecoration: 'none' }}
+        to={{
+          pathname: '/emoji/' + emoji.urlName
+        }}
+      >
+        {emoji.emoji}
+      </Link>
+
+    </div>
+  );
+}
+
 const EmojiList = ({ match }) => (
   <div>
     <h1>Emoji</h1>
@@ -31,19 +47,7 @@ const EmojiList = ({ match }) => (
     <Route path={`${match.url}/:name`}  component={EmojiDetails}/>
     <Route exact path={match.url} render={() => (
       <div>
-        {emojis.map(emoji => (
-          <div key={emoji.order} className="character-box">
-            <Link 
-              style={{ textDecoration: 'none' }}
-              to={{
-                pathname: match.url + '/' + emoji.urlName
-              }}
-            >
-              {emoji.emoji}
-            </Link>
-
-          </div>
-        ))}
+        {emojis.map(emoji => EmojiBox(emoji))}
       </div>
     )}/>
 
