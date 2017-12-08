@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import {
   HashRouter,
-  Route,
-  Link,
-  NavLink
+  Route
 } from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 // import Scripts from './Scripts';

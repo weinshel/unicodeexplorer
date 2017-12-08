@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
+import {LinkContainer} from 'react-router-bootstrap';
+
 
 import helpers from './helpers.js';
 
@@ -13,10 +14,12 @@ import emojis from 'emojibase-data/en/data.json';
 emojis.forEach(emoji => {
   if (emoji.annotation) {
     emoji.urlName = helpers.urlName(emoji.annotation);
-    emoji.cleanName = helpers.cleanName(emoji.annotation);
+    // emoji.cleanName = helpers.cleanName(emoji.annotation);
+    emoji.customName = emoji.annotation;
   } else {
     emoji.urlName = helpers.urlName(emoji.name);
-    emoji.cleanName = helpers.cleanName(emoji.name);
+    // emoji.cleanName = helpers.cleanName(emoji.name);
+    emoji.customName = helpers.cleanName(emoji.name);
   }
 })
 
@@ -26,17 +29,17 @@ emojis.forEach(emoji => {
 
 const EmojiBox = (emoji) => {
   return (
-    <div key={emoji.order} className="character-box">
-      <Link 
-        style={{ textDecoration: 'none' }}
-        to={{
-          pathname: '/emoji/' + emoji.urlName
-        }}
-      >
+    <LinkContainer
+      style={{ textDecoration: 'none' }}
+      to={{
+        pathname: '/emoji/' + emoji.urlName
+      }}
+    >
+      <div key={emoji.order} className="character-box">
         {emoji.emoji}
-      </Link>
+      </div>
+    </LinkContainer>
 
-    </div>
   );
 }
 
@@ -79,7 +82,7 @@ const EmojiDetails = ({ match }) => {
   return (
     <div>
       {EmojiBoxLarge(details)}
-      <p>{details.cleanName}</p>
+      <p>{details.customName}</p>
       <pre>{details.hexcode}</pre>
       <pre>{JSON.stringify(details, null, '\t')}</pre>
     </div>

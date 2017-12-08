@@ -1,13 +1,9 @@
 import React from 'react';
-import {
-  Route,
-  Link
-} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 
-import helpers from './helpers.js';
+// import helpers from './helpers.js';
 
-import {getBlocks, getCharacters} from 'unidata10';
+import {getCharacters} from 'unidata10';
 
 
 const CharacterBox = (codepoint) => {
