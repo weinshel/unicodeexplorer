@@ -39,6 +39,10 @@ class App extends Component {
                 </NavItem>
               </LinkContainer>
             </Nav>
+            <Nav pullRight>
+              <NavItem href="https://github.com/weinshel/unicodeexplorer" target="_blank">About</NavItem>
+              <NavItem href="https://github.com/weinshel/unicodeexplorer" target="_blank">GitHub</NavItem>
+            </Nav>
           </Navbar>
 
           <br/><br/><br/>
