@@ -11,6 +11,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 // import Scripts from './Scripts';
 import Blocks from './Blocks';
 import EmojiList from  './Emojis';
+import AboutPage from './About'
 import {CharacterPage} from './Characters';
 import './App.css';
 
@@ -19,40 +20,46 @@ class App extends Component {
     return(
       <HashRouter>
         <div>
-          <Navbar  fixedTop>
+          <Navbar fixedTop>
             <Navbar.Header>
               <LinkContainer to="/">
                 <Navbar.Brand>
                   Unicode Explorer
                 </Navbar.Brand>
               </LinkContainer>
+              <Navbar.Toggle />
             </Navbar.Header>
-            <Nav>
-              <LinkContainer to="/blocks">
-                <NavItem>
-                  Character Blocks
-                </NavItem>
-              </LinkContainer>
-              <LinkContainer to="/emoji">
-                <NavItem>
-                  Emoji
-                </NavItem>
-              </LinkContainer>
-            </Nav>
-            <Nav pullRight>
-              <NavItem href="https://github.com/weinshel/unicodeexplorer" target="_blank">About</NavItem>
-              <NavItem href="https://github.com/weinshel/unicodeexplorer" target="_blank">GitHub</NavItem>
-            </Nav>
+            <Navbar.Collapse>
+              <Nav>
+                <LinkContainer to="/blocks">
+                  <NavItem>
+                    Character Blocks
+                  </NavItem>
+                </LinkContainer>
+                <LinkContainer to="/emoji">
+                  <NavItem>
+                    Emoji
+                  </NavItem>
+                </LinkContainer>
+              </Nav>
+              <Nav pullRight>
+                <LinkContainer to="/about">
+                  <NavItem>
+                    About
+                  </NavItem>
+                </LinkContainer>
+                <NavItem href="https://github.com/weinshel/unicodeexplorer" target="_blank">GitHub</NavItem>
+              </Nav>
+            </Navbar.Collapse>
           </Navbar>
-
-          <br/><br/><br/>
-
-          <div className="container">
+          
+          <div className="container containerInner">
             <Route exact path="/" component={Home}/>
             {/* <Route path="/scripts" component={Scripts}/> */}
             <Route path="/blocks" component={Blocks}/>
             <Route path="/emoji" component={EmojiList}/>
             <Route path="/characters/:name" component={CharacterPage}/>
+            <Route path="/about" component={AboutPage}/>
           </div>
         </div>
       </HashRouter>

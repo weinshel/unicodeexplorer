@@ -58,6 +58,10 @@ body {
 }
 
 .homeText {
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 14pt;
+}
+
+.containerInner {
+  padding-top: 60px;
 }
