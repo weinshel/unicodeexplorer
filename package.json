@@ -5,6 +5,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3",
+    "concat-map": "^0.0.1",
+    "emojibase": "^1.4.3",
     "emojibase-data": "^2.1.1",
     "gh-pages": "^1.1.0",
     "react": "^16.1.1",

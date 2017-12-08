@@ -1461,7 +1461,7 @@ compression@^1.5.2:
     safe-buffer "5.1.1"
     vary "~1.1.2"
 
-concat-map@0.0.1:
+concat-map@0.0.1, concat-map@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
@@ -2015,6 +2015,10 @@ emoji-regex@^6.1.0:
 emojibase-data@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/emojibase-data/-/emojibase-data-2.1.1.tgz#2153bf197aac14ab6881c734e119fb06abf398e0"
+
+emojibase@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/emojibase/-/emojibase-1.4.3.tgz#894e336dc88b0d4e72ae45d92a26d4ab2b4e5957"
 
 emojis-list@^2.0.0:
   version "2.1.0"

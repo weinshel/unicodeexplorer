@@ -48,11 +48,26 @@ const CharacterPage = ({ match }) => {
   return (
     <div>
       <h1>Characters</h1>
+      <h2>{details.name}</h2>
       {CharacterBoxLarge(codepoint)}
-      <p>{details.name}</p>
-      <pre>{JSON.stringify(details, null, '\t')}</pre>
+      <ul>
+        <li><strong>Name:</strong> {details.name}</li>
+        {/* <li><strong>Hex:</strong> {details.code}</li> */}
+        <li><strong>Decimal:</strong> {details.code}</li>
+        <li><strong>Category:</strong> {details.cat}</li>
+        {details.bidi && <li><strong>Bidirectional category:</strong> {details.bidi}</li>}
+        {details.decompType && <li><strong>Decomposition type:</strong> {details.decompType}</li>}
+        {details.decomp && <li><strong>Decomposition mapping:</strong> {details.decomp}</li>}
+        {details.oldName && <li><strong>Old name:</strong> {details.oldName}</li>}
+        {details.upper && <li><strong>Uppercase:</strong> {details.upper}</li>}
+        {details.lower && <li><strong>Lowercase:</strong> {details.lower}</li>}
+        {details.title && <li><strong>Title case:</strong> {details.title}</li>}
+
+      </ul>
+      {/* <br/> */}
+      {/* <pre>{JSON.stringify(details, null, '\t')}</pre> */}
     </div>
-  )
+  );
 }
 
 

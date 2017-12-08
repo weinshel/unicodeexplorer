@@ -1,13 +1,12 @@
 import React from 'react';
-import {
-  Route
-} from 'react-router-dom';
-import {LinkContainer} from 'react-router-bootstrap';
-
+import { Route, Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
+import concatMap from 'concat-map';
 
 import helpers from './helpers.js';
 
 import emojis from 'emojibase-data/en/data.json';
+import { generateEmoticonPermutations } from 'emojibase';
 // import compact from 'emojibase-data/en/compact.json';
 
 
@@ -79,12 +78,32 @@ const EmojiDetails = ({ match }) => {
   );
   }
 
+  let hexchars = details.hexcode.split("-");
+  let decimalchars = hexchars.map(x => Number.parseInt(x, 16));
+  let decimallinks = decimalchars.map(x => (
+    <Link to={{pathname: '/characters/' + x}}>{x} </Link>
+  ));
+
   return (
     <div>
+      <h2>{details.customName}</h2>
       {EmojiBoxLarge(details)}
-      <p>{details.customName}</p>
-      <pre>{details.hexcode}</pre>
-      <pre>{JSON.stringify(details, null, '\t')}</pre>
+      <ul>
+        <li><strong>Name:</strong> {details.name}</li>
+        {details.annotation && <li><strong>Annotation:</strong> {details.annotation}</li>}
+        {details.shortcodes && <li><strong>Shortcodes:</strong> {details.shortcodes.join(", ")}</li>}
+        {details.tags && <li><strong>Tags:</strong> {details.tags.join(", ")}</li>}
+        {details.emoticon && <li><strong>Emoticon:</strong> {details.emoticon}
+          <ul>
+            <li><em>Alternatively</em>,: {generateEmoticonPermutations(details.emoticon).join(", ")}</li>
+          </ul>
+        </li>}
+        <li><strong>Hex: {details.hexcode}</strong></li>
+        <li><strong>Decimal: {decimallinks}</strong></li>
+        {details.skins && <li><strong>Skin variations:</strong> <pre>{JSON.stringify(details.skins, null, '\t')}</pre></li>}
+      </ul>
+      {/* <br/> */}
+      {/* <pre>{JSON.stringify(details, null, '\t')}</pre> */}
     </div>
   );
 }
