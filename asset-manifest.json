@@ -1,11 +1,18 @@
 {
-  "main.css": "static/css/main.248a8f78.css",
-  "main.css.map": "static/css/main.248a8f78.css.map",
-  "main.js": "static/js/main.2ed1b0d1.js",
-  "main.js.map": "static/js/main.2ed1b0d1.js.map",
-  "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
-  "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.89889688.svg",
-  "static/media/glyphicons-halflings-regular.ttf": "static/media/glyphicons-halflings-regular.e18bbf61.ttf",
-  "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.fa277232.woff",
-  "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2"
+  "files": {
+    "main.css": "/unicodeexplorer/static/css/main.80079a47.chunk.css",
+    "main.js": "/unicodeexplorer/static/js/main.59544c01.chunk.js",
+    "main.js.map": "/unicodeexplorer/static/js/main.59544c01.chunk.js.map",
+    "runtime~main.js": "/unicodeexplorer/static/js/runtime~main.39ee2cb1.js",
+    "runtime~main.js.map": "/unicodeexplorer/static/js/runtime~main.39ee2cb1.js.map",
+    "static/css/2.d44fe718.chunk.css": "/unicodeexplorer/static/css/2.d44fe718.chunk.css",
+    "static/js/2.0b981f7e.chunk.js": "/unicodeexplorer/static/js/2.0b981f7e.chunk.js",
+    "static/js/2.0b981f7e.chunk.js.map": "/unicodeexplorer/static/js/2.0b981f7e.chunk.js.map",
+    "index.html": "/unicodeexplorer/index.html",
+    "precache-manifest.8fe95a28785bd9c7db184be4b7e3fa66.js": "/unicodeexplorer/precache-manifest.8fe95a28785bd9c7db184be4b7e3fa66.js",
+    "service-worker.js": "/unicodeexplorer/service-worker.js",
+    "static/css/2.d44fe718.chunk.css.map": "/unicodeexplorer/static/css/2.d44fe718.chunk.css.map",
+    "static/css/main.80079a47.chunk.css.map": "/unicodeexplorer/static/css/main.80079a47.chunk.css.map",
+    "static/media/bootstrap.css": "/unicodeexplorer/static/media/glyphicons-halflings-regular.fa277232.woff"
+  }
 }
