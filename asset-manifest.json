@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.css": "/unicodeexplorer/static/css/main.80079a47.chunk.css",
-    "main.js": "/unicodeexplorer/static/js/main.59544c01.chunk.js",
-    "main.js.map": "/unicodeexplorer/static/js/main.59544c01.chunk.js.map",
-    "runtime~main.js": "/unicodeexplorer/static/js/runtime~main.39ee2cb1.js",
-    "runtime~main.js.map": "/unicodeexplorer/static/js/runtime~main.39ee2cb1.js.map",
-    "static/css/2.d44fe718.chunk.css": "/unicodeexplorer/static/css/2.d44fe718.chunk.css",
-    "static/js/2.0b981f7e.chunk.js": "/unicodeexplorer/static/js/2.0b981f7e.chunk.js",
-    "static/js/2.0b981f7e.chunk.js.map": "/unicodeexplorer/static/js/2.0b981f7e.chunk.js.map",
+    "main.css": "/unicodeexplorer/static/css/main.138bc7b4.chunk.css",
+    "main.js": "/unicodeexplorer/static/js/main.94d7d7f8.chunk.js",
+    "main.js.map": "/unicodeexplorer/static/js/main.94d7d7f8.chunk.js.map",
+    "runtime-main.js": "/unicodeexplorer/static/js/runtime-main.70bd3312.js",
+    "runtime-main.js.map": "/unicodeexplorer/static/js/runtime-main.70bd3312.js.map",
+    "static/css/2.6f6649cb.chunk.css": "/unicodeexplorer/static/css/2.6f6649cb.chunk.css",
+    "static/js/2.b5f12a3a.chunk.js": "/unicodeexplorer/static/js/2.b5f12a3a.chunk.js",
+    "static/js/2.b5f12a3a.chunk.js.map": "/unicodeexplorer/static/js/2.b5f12a3a.chunk.js.map",
     "index.html": "/unicodeexplorer/index.html",
-    "precache-manifest.8fe95a28785bd9c7db184be4b7e3fa66.js": "/unicodeexplorer/precache-manifest.8fe95a28785bd9c7db184be4b7e3fa66.js",
-    "service-worker.js": "/unicodeexplorer/service-worker.js",
-    "static/css/2.d44fe718.chunk.css.map": "/unicodeexplorer/static/css/2.d44fe718.chunk.css.map",
-    "static/css/main.80079a47.chunk.css.map": "/unicodeexplorer/static/css/main.80079a47.chunk.css.map",
-    "static/media/bootstrap.css": "/unicodeexplorer/static/media/glyphicons-halflings-regular.fa277232.woff"
-  }
+    "static/css/2.6f6649cb.chunk.css.map": "/unicodeexplorer/static/css/2.6f6649cb.chunk.css.map",
+    "static/css/main.138bc7b4.chunk.css.map": "/unicodeexplorer/static/css/main.138bc7b4.chunk.css.map",
+    "static/js/2.b5f12a3a.chunk.js.LICENSE.txt": "/unicodeexplorer/static/js/2.b5f12a3a.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.css": "/unicodeexplorer/static/media/glyphicons-halflings-regular.be810be3.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70bd3312.js",
+    "static/css/2.6f6649cb.chunk.css",
+    "static/js/2.b5f12a3a.chunk.js",
+    "static/css/main.138bc7b4.chunk.css",
+    "static/js/main.94d7d7f8.chunk.js"
+  ]
 }
