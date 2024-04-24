@@ -4,7 +4,7 @@ import {
   Link
 } from 'react-router-dom';
 
-import unicode from 'unicode-10.0.0';
+import unicode from 'unicode-15.1.0';
 // import {getBlocks, getCharacters} from 'unidata';
 
 import helpers from './helpers';
@@ -59,7 +59,7 @@ const CharactersGrid = ({ match }) => {
   }
 
   // const codePoints = require('unicode-10.0.0/Script/' + scriptName + '/code-points');
-  const symbols = require('unicode-10.0.0/' + type + '/' + scriptName + '/symbols');
+  const symbols = require('unicode-15.1.0/' + type + '/' + scriptName + '/symbols');
 
   return(
     <div>

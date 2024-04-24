@@ -4,8 +4,7 @@ import {
   Link
 } from 'react-router-dom';
 
-// import unicode from 'unicode-10.0.0';
-import {getBlocks, getCharacters} from 'unidata10';
+import {getBlocks, getCharacters} from 'unidata';
 
 import helpers from './helpers';
 import {CharacterBox} from './Characters';

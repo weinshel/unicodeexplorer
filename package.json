@@ -11,10 +11,10 @@
     "build": "parcel build"
   },
   "dependencies": {
+    "@unicode/unicode-15.1.0": "^1.5.2",
     "bootstrap": "^3.4.1",
-    "concat-map": "^0.0.2",
-    "emojibase": "^1.4.3",
-    "emojibase-data": "^2.1.1",
+    "emojibase": "^15.3.0",
+    "emojibase-data": "^15.3.0",
     "gh-pages": "^6.1.1",
     "react": "^16.1.1",
     "react-bootstrap": "^0.33.1",
@@ -22,9 +22,8 @@
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^4.2.2",
     "unicharadata": "^9.0.0-alpha.6",
-    "unicode": "^10.0.0",
-    "unicode-10.0.0": "^0.7.4",
-    "unidata10": "^10.0.1"
+    "unicode": "^14.0.0",
+    "unidata": "^13.0.0"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.12.0",

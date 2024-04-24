@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import concatMap from 'concat-map';
 
 import helpers from './helpers.js';
 
@@ -16,9 +15,9 @@ emojis.forEach(emoji => {
     // emoji.cleanName = helpers.cleanName(emoji.annotation);
     emoji.customName = emoji.annotation;
   } else {
-    emoji.urlName = helpers.urlName(emoji.name);
-    // emoji.cleanName = helpers.cleanName(emoji.name);
-    emoji.customName = helpers.cleanName(emoji.name);
+    emoji.urlName = helpers.urlName(emoji.label);
+    // emoji.cleanName = helpers.cleanName(emoji.label);
+    emoji.customName = helpers.cleanName(emoji.label);
   }
 })
 

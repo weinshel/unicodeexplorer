@@ -3,7 +3,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 
 // import helpers from './helpers.js';
 
-import {getCharacters} from 'unidata10';
+import {getCharacters} from 'unidata';
 
 
 const CharacterBox = (codepoint) => {
