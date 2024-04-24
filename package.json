@@ -5,8 +5,9 @@
   "private": true,
   "source": "src/index.html",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "rm -r .parcel-cache && parcel build --public-url '/unicodeexplorer'",
     "deploy": "gh-pages -d dist",
+    "postdeploy": "rm -r .parcel-cache",
     "start": "parcel",
     "build": "parcel build"
   },
